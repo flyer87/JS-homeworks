@@ -60,12 +60,18 @@
     <Content Include="1. odd-or-even.html" />
     <Content Include="2. divisibble-by-7-and-5-without-reminder.html" />
     <Content Include="3. calc-rectangles-area.html" />
+    <Content Include="4. third-digit-is-seven.html" />
+    <Content Include="6. check-point-in-a-circle.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="5. find-3th-bit.html" />
+    <Content Include="7. is-prime.html" />
+    <Content Include="8. calc-trapezoids-area.html" />
+    <Content Include="09. in-circle-out-of-rectangle.html" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
