@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>    
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var real1 = 1;
+        var real2 = 1;
+        var real3 = 1;
+        var countNegatives = 0;
+
+        if (real1 < 0 )
+        {
+            countNegatives++;
+        }
+
+        if (real2 < 0) {
+            countNegatives++;
+        }
+
+        if (real3 < 0) {
+            countNegatives++;
+        }
+
+        if (countNegatives % 2 == 0) {
+            jsConsole.writeLine("Sign of product: '+' ");
+        }
+        else {
+            jsConsole.writeLine("Sign of product: '-' ");
+        }
+
+    </script>
+</body>
+</html>

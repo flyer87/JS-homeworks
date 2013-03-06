@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>    
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var number1 = 5000;
+        var number2 = -600;
+        var number3 = 10000;
+
+        var biggest = number1;
+
+        if (number2 > biggest)
+        {
+            biggest = number2;           
+        }
+
+        if (number3 > biggest)
+        {
+            biggest = number3;
+        }
+
+        jsConsole.writeLine("Biggest: " + biggest);
+
+
+    </script>
+</body>
+</html>
