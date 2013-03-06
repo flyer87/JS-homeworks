@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>    
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var point_x = 1;
+        var point_y = 1;
+        
+        var circle_x = 1;
+        var circle_y = 1;
+        var circle_radius = 3;
+        
+        var rect_top = 1;
+        var rect_left = -1;
+        var rect_width = 6;
+        var rect_height = 2;
+
+        var inCircle =
+        ((point_x - circle_x) * (point_x - circle_x) + (point_y - circle_y) * (point_y - circle_y))
+        <= (circle_radius * circle_radius) ? true : false;
+
+        var inRect = ((point_x >= rect_top) && (point_x <= (rect_top+rect_width)) ) 
+            && ( (point_y<= rect_left) && (point_y >= (rect_left - rect_height))) ? true:false;
+
+        jsConsole.writeLine("In circle: " + inCircle + ", in rectangle: " + inRect);
+
+    </script>
+
+</body>
+</html>

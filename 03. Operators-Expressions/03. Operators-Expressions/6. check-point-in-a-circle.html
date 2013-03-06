@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>    
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        // info about circle
+        var x0 = 0;
+        var y0 = 0;
+        var R = 5;
+
+        // point data
+        var x = 2;
+        var y = 3;       
+        
+        //if (((x - x0) * (x - x0) + (y - y0) * (y - y0)) <= R*R) {
+        if (  ( Math.pow((x - x0),2) + Math.pow((y - y0),2) ) <= Math.pow(R,2)   ) {
+            jsConsole.writeLine("Point(" + x + "," + y + ") is inside the circle");
+        }
+        else {
+            jsConsole.writeLine("Point(" + x + "," + y + ") is outside the circle");
+        }
+
+    </script>
+</body>
+</html>

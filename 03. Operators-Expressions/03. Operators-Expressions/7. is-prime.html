@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>    
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var number = 2;
+        var isPrime = true;
+
+        var temp = 2;
+        while (temp <= Math.sqrt(number) && (isPrime) ) {
+            if (number % temp == 0) {
+                isPrime = false;
+            }
+            temp++;
+        }        
+        jsConsole.writeLine( number + " is prime: " + isPrime);        
+
+    </script>
+
+</body>
+</html>
