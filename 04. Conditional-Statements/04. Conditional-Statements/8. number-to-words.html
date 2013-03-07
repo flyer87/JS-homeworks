@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Number to text</title>    
+    <link href="styles/js-console.css" rel="stylesheet" />
+ <style>
+		.number {
+			border: 1px solid black;
+			padding: 5px 15px;
+			background-color: black;
+			color: white;
+			font-family: Consolas;
+			margin-bottom: 5px;
+		}
+
+		a {
+			color: black;
+			border: 1px solid black;
+			padding: 5px 15px;
+			text-decoration: none;
+			display: inline-block;
+			margin: 15px 0;
+		}
+
+			a:hover {
+				text-decoration: underline;
+			}
+	</style>
+</head>
+<body>    
+    <label for="a">Number: </label> <input id="a" class="number" /> <br />
+    <a href="#" onclick="getText()">Convert</a>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>    
+
+    <script>	
+        function digitToText(digit) {
+            var word;
+            switch (digit) {                
+                case "1": word = "one"  ; break;
+                case "2": word = "two"  ; break;
+                case "3": word = "three"; break;
+                case "4": word = "four" ; break;
+                case "5": word = "five" ; break;
+                case "6": word = "six"  ; break;
+                case "7": word = "seven"; break;
+                case "8": word = "eight"; break;
+                case "9": word = "nine" ; break;
+                default:
+                    word = "zero";
+            }
+            return word;
+        }
+
+        function tiesToText(digit) {
+            switch (digit) {
+                case "2": return " twenty ";
+                case "3": return " thirty ";
+                case "4": return " fourty ";
+                case "5": return " fifty ";
+                case "6": return " sixty ";
+                case "7": return " seventy ";
+                case "8": return " eighty ";
+                case "9": return " ninety ";
+                default: return "-1";
+            }
+        }
+
+        function decadeToString(digit) {
+            switch (digit) {
+                case "10": return " ten";
+                case "11": return " eleven";
+                case "12": return " tweleve";
+                case "13": return " thirteen";
+                case "14": return " fourteen";
+                case "15": return " fifteen";
+                case "16": return " sixteen";
+                case "17": return " seventeen";
+                case "18": return " eighteen";
+                case "19": return " nineteen";
+                default: return "-1";
+            }
+        }
+
+        function getText() {
+            var textOfNumber = "";
+            var number = jsConsole.readInteger("#a").toString();
+
+            var hasTies = false;
+            var tmp;
+                        
+            do {
+                if (number.length == 3) {
+                    tmp = digitToText(number[0]);
+                    if (tmp != "-1") {
+                        textOfNumber = textOfNumber + tmp + " hundred";
+                    }
+                    number = number.substring(1, 3);
+                }
+
+                if (number.length == 2) {
+                    if (number[0] >= 2) {
+                        tmp = tiesToText(number[0]);
+                        if (tmp != "-1") {
+                            textOfNumber = textOfNumber + tmp;
+                            hasTies = true;
+                        }
+                        number = number.substring(1, 2);
+                    }
+                    else {
+                        tmp = decadeToString(number);
+                        if (tmp != "-1") {
+                            if (textOfNumber == "") {
+                                textOfNumber = tmp;
+                            }
+                            else {
+                                textOfNumber = textOfNumber + " and " + tmp;
+                            }
+                            number = "";
+                        }
+                        else
+                            number = number.substring(1, 2);
+                    }
+                }
+
+                if (number.length == 1) {
+                    tmp = digitToText(number[0]);
+                    if (tmp != "-1") {
+                        if (textOfNumber == "") {
+                            textOfNumber = tmp;
+                        }
+                        else
+                            if (hasTies) {
+                                if (number[0] != 0)
+                                    textOfNumber = textOfNumber + tmp;
+                            }
+                            else
+                                textOfNumber = textOfNumber + " and " + tmp;
+                    }
+                    number = "";
+                }
+
+            } while (number.length > 0);
+
+            if (textOfNumber == "") {
+                textOfNumber = "zero";
+            }
+
+            jsConsole.writeLine(textOfNumber);
+        }
+
+    </script>
+</body>
+</html>

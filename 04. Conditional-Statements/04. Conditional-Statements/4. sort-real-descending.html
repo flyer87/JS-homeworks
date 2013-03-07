@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>    
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var real1 = 1.0;
+        var real2 = 3.0;
+        var real3 = 4.9;
+
+        var temp;
+        jsConsole.writeLine("Before ordering: " + real1 +", "+ real2+ ", " +real3);
+
+        if (real2 > real1) {
+            temp  = real2;
+            real2 = real1;
+            real1 = temp;
+        }
+
+        if (real3 > real1) {
+            temp  = real3;
+            real3 = real1;
+            real1 = temp;
+        }
+
+        if (real3 > real2) {
+            temp  = real3;
+            real3 = real2;
+            real2 = temp;
+        }
+
+        if (real2 > real1) {
+            temp = real2;
+            real2 = real1;
+            real1 = temp;
+        }
+
+        jsConsole.writeLine("After ordering: " + real1 + ", " + real2 + ", " + real3);
+    </script>
+
+</body>
+</html>

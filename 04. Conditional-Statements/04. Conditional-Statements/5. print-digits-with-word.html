@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Digit to Word</title>    
+    <link href="styles/js-console.css" rel="stylesheet" />
+	<style>
+		.number {
+			border: 1px solid black;
+			padding: 5px 15px;
+			background-color: black;
+			color: white;
+			font-family: Consolas;
+			margin-bottom: 5px;
+		}
+
+		a {
+			color: black;
+			border: 1px solid black;
+			padding: 5px 15px;
+			text-decoration: none;
+			display: inline-block;
+			margin: 15px 0;
+		}
+
+			a:hover {
+				text-decoration: underline;
+			}
+	</style>
+</head>
+<body>
+	<label for="tb-day">Text: </label> <input type="text" id="tb-digit" />	
+	<br />
+	<a href="#" onclick="onDayButtonClick()">Digit: </a>
+
+	<div id="js-console"></div>	
+	<script src="scripts/js-console.js"></script>	
+
+    <script>
+		function onDayButtonClick() {
+		    var digit = jsConsole.readInteger("#tb-digit");
+		    var word;
+		    switch (digit) {
+		        case 0: word = "zero" ; break;
+		        case 1: word = "one"  ; break;
+		        case 2: word = "two"  ; break;
+		        case 3: word = "three"; break;
+		        case 4: word = "four" ; break;
+		        case 5: word = "five" ; break;
+		        case 6: word = "six"  ; break;
+		        case 7: word = "seven"; break;
+		        case 8: word = "eight"; break;
+		        case 9: word = "nine" ; break;
+		        default:
+		            word = "Invalid digit";
+		    }
+		    jsConsole.writeLine(word);
+
+		}
+    </script>
+</body>
+</html>
