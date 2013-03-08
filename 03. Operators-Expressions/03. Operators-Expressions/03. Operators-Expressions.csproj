@@ -71,7 +71,7 @@
     <Content Include="5. find-3th-bit.html" />
     <Content Include="7. is-prime.html" />
     <Content Include="8. calc-trapezoids-area.html" />
-    <Content Include="09. in-circle-out-of-rectangle.html" />
+    <Content Include="9. in-circle-out-of-rectangle.html" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
