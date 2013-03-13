@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Lexicoraphycally smallest and largest </title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console"></div>	
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    jsConsole.writeLine("Lexicographically smallest and largest elements in document: ");
+	    
+	    var min = "zzzzzzz";
+	    var max = "";
+	    for (var prop in document) {
+	        if (prop > max) {
+                max = prop
+	        }
+
+	        if (prop < min) {
+	            min = prop
+	        }
+        }
+	    jsConsole.writeLine("Min: " + min);
+	    jsConsole.writeLine("Max: " + max);
+
+
+	    // navigator
+	    var min = "zzzzzzz";
+	    var max = "";
+	    jsConsole.writeLine();
+	    jsConsole.writeLine("Lexicographically smallest and largest elements in navigator: ");
+	    for (var prop in navigator) {
+
+	        if (prop > max) {
+	            max = prop
+	        }
+
+	        if (prop < min) {
+	            min = prop
+	        }
+	    }
+	    jsConsole.writeLine("Min: " + min);
+	    jsConsole.writeLine("Max: " + max);
+	    
+	    // window
+	    jsConsole.writeLine();
+	    var min = "zzzzzzz";
+	    var max = "";
+	    jsConsole.writeLine("Lexicographically smallest and largest elements in window: ");
+	    for (var prop in window) {
+
+	        if (prop > max) {
+	            max = prop
+	        }
+
+	        if (prop < min) {
+	            min = prop
+	        }
+	    }
+	    jsConsole.writeLine("Min: " + min);
+	    jsConsole.writeLine("Max: " + max);
+
+
+	</script>
+</body>
+</html>

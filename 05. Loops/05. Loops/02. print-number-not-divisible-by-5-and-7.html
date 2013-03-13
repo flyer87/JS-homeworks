@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<label for="tb-number">Number: </label>
+	<input type="text" id="tb-number" />
+	<br />
+    <a href="#" id="btn-power" onclick="onBtnClick()">Find: </a>
+
+	<div id="js-console"></div>	
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    function onBtnClick() {
+	        var n = jsConsole.readInteger("#tb-number");
+	        for (var i = 1; i <= n; i++) {
+	            if (i % 35 != 0) {
+	                jsConsole.writeLine(i);
+	            }
+	        }
+
+	    }
+	</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+E:\TELERIK\JS-homeworks\05. Loops\05. Loops\bin\_05.Loops.dll
+E:\TELERIK\JS-homeworks\05. Loops\05. Loops\bin\_05.Loops.pdb
+E:\TELERIK\JS-homeworks\05. Loops\05. Loops\obj\Debug\05. Loops.csprojResolveAssemblyReference.cache
+E:\TELERIK\JS-homeworks\05. Loops\05. Loops\obj\Debug\_05.Loops.dll
+E:\TELERIK\JS-homeworks\05. Loops\05. Loops\obj\Debug\_05.Loops.pdb

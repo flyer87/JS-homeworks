@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>	
+	<div id="js-console"></div>	
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var numbers = [3, -1, 6, 10, -5, 0];
+
+	    var min = Number.MAX_VALUE; // default
+	    var max = Number.MIN_VALUE; // default
+	    for (var i = 0; i < numbers.length; i++) {
+	        if (numbers[i] < min) {
+	            min = numbers[i];
+	        }
+
+	        if (numbers[i] > max) {
+	            max = numbers[i];
+	        }
+	    }
+
+	    jsConsole.writeLine("Min: " + min);
+	    jsConsole.writeLine("Max: " + max);
+	</script>
+</body>
+</html>
