@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <a href="#" id="btn-power" onclick="onBtnClick()">Get number of DIV tags: </a>
+
+    <div id="js-console"></div>
+    <div id="Div1"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function onBtnClick() {
+            var divTags = document.getElementsByTagName("div");
+            jsConsole.writeLine("Number of DIV tags: " + divTags.length);
+        }        
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Reverse number</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="tb-number">Nnnn: </label>
+    <input type="text" id="tb-number" />
+    <br />
+    <a href="#" id="btn-power" onclick="onBtnClick()">Print: </a>
+
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function reverseNumber(number) {
+            var strNumber = Number(number).toString().split("").reverse().join("");
+            var countOfZeros = 0;
+            for (var i = 0, len = strNumber.length ; i < len; i++) {
+                if (strNumber[i] == 0) {
+                    countOfZeros++;
+                }
+                else break;
+            }
+            return strNumber.substring(countOfZeros);
+        }
+
+        function onBtnClick() {
+            // var number = jsConsole.readInteger("#tb-number");
+            // var reversed = reverseNumber(number);
+            var pattern = new RegExp("\bis\b", "g");
+            var text = "this is my is you is";
+            var matches = text.match(pattern);
+            jsConsole.writeLine(matches);
+
+        //    for (var i in matches) {
+                //jsConsole.writeLine(1);
+            //}
+        }
+    </script>
+</body>
+</html>

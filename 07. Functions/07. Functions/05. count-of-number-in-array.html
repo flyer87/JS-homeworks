@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <a href="#" id="btn-power" onclick="onBtnClick()">Get count of specified number: </a>
+
+	<div id="js-console"></div>	
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    function onBtnClick() {
+	        var array = [1, 2, 3, 4, 1, 5];
+	        var number = 1;
+	        jsConsole.writeLine(count(number, array));
+	    }
+
+	    function count(number, array) {
+	        var countOfNum = 0;
+	        for (var i = 0, len = array.length; i < len; i++) {            
+	            if (array[i] === Number(number)) {
+                    countOfNum++
+	            }
+	        }
+	        return countOfNum;
+	    }
+	</script>
+</body>
+</html>

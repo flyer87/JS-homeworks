@@ -1,0 +1,5 @@
+E:\telerik\JS-homeworks\07. Functions\07. Functions\bin\_07.Functions.dll
+E:\telerik\JS-homeworks\07. Functions\07. Functions\bin\_07.Functions.pdb
+E:\telerik\JS-homeworks\07. Functions\07. Functions\obj\Debug\07. Functions.csprojResolveAssemblyReference.cache
+E:\telerik\JS-homeworks\07. Functions\07. Functions\obj\Debug\_07.Functions.dll
+E:\telerik\JS-homeworks\07. Functions\07. Functions\obj\Debug\_07.Functions.pdb

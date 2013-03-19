@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<label for="tb-number">Number: </label>
+	<input type="text" id="tb-number" />
+	<br />
+    <a href="#" id="btn-power" onclick="onBtnClick()">Print: </a>
+
+	<div id="js-console"></div>	
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    function digitToWord(digit) {
+	        switch (Number(digit)) {
+	            case 0: return "zero";
+	            case 1: return "one";
+	            case 2: return "two";
+	            case 3: return "three";
+	            case 4: return "four";
+	            case 5: return "five";
+	            case 6: return "six";
+	            case 7: return "seven";
+	            case 8: return "eight";
+	            case 9: return "nine";
+	            default: return "zero";
+	        }
+	    }
+
+	    function onBtnClick() {
+	        var number = jsConsole.readInteger("#tb-number");            
+	        var number = number.toString();
+	        jsConsole.writeLine(digitToWord(number[number.length - 1]));
+	    }
+	    
+	</script>
+</body>
+</html>
