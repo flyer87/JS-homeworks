@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Is bigger than its neighb.</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <a href="#" id="btn-power" onclick="hasBiggerNeighbouroods()"></a>
+
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var array = [6, 2, 5, 10];
+        //var searchedIndex = 0;
+        var searchedIndex = array.length - 1;
+
+        if (hasBiggerNeighbouroods(array, searchedIndex)) {
+            jsConsole.writeLine("array[" + searchedIndex + "]=" + array[searchedIndex] + " is bigger than its neigbours");
+        }
+        else
+            jsConsole.writeLine("array[" + searchedIndex + "]=" + array[searchedIndex] + " is NOT bigger than its neigbours");
+
+        function hasBiggerNeighbouroods(array, index) {
+            // if elements are less than 3 => number has no neighb.
+            if (array.length < 3) {
+                return false;
+            }
+
+            // if passed index is 0 then check with integer at position array.lenght-1 and 1
+            if (index == 0) {
+                if ((array[index] > array[array.length - 1]) && (array[index] > array[index + 1])) {
+                    return true;
+                }
+                else
+                    return false;
+            }
+
+            // if passed index is index of last element
+            if (index == array.length - 1) {
+                if ((array[index] > array[index - 1]) && (array[index] > array[0])) {
+                    return true;
+                }
+                else
+                    return false;
+            }
+
+            // otherwise
+            if ((array[index] > array[index - 1]) && (array[index] > array[index + 1])) {
+                return true;
+            }
+            else
+                return false;
+        }
+    </script>
+</body>
+</html>

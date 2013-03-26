@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>First elem. bigger than its neighb.</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var array = [6, 7, 9, 7];
+
+        var indexofFirstBigger = findIndexOfFirstBiggerItem(array);
+        if (indexofFirstBigger == -1) {
+            jsConsole.writeLine("There is no such element!");
+        }
+        else {
+            jsConsole.writeLine("First bigger item is: " + array[indexofFirstBigger]);
+        }
+
+        // finds index of first bigger item otherwies returns -1
+        function findIndexOfFirstBiggerItem(array) {
+            var indexOfFirstBiggerElelemnt = -1;
+
+            for (var i = 0; i < array.length; i++) {
+                if (hasBiggerNeighbourhoods(array, i)) {
+                    indexOfFirstBiggerElelemnt = i;
+                    break;
+                }
+            }
+
+            return indexOfFirstBiggerElelemnt;
+        }
+
+        // checks if element as position index is bigger than its neighbours
+        function hasBiggerNeighbourhoods(array, index) {
+
+            // if elements are less than 3 => number has no neighb.
+            if (array.length < 3) {
+                return false;
+            }
+
+            // if passed index is 0 then check with integer at position array.lenght-1 and 1
+            if (index == 0) {
+                if ((array[index] > array[array.length - 1]) && (array[index] > array[index + 1])) {
+                    return true;
+                }
+                else
+                    return false;
+            }
+
+            // if passed index is index of last element
+            if (index == array.length - 1) {
+                if ((array[index] > array[index - 1]) && (array[index] > array[0])) {
+                    return true;
+                }
+                else
+                    return false;
+            }
+
+            // otherwise
+            if ((array[index] > array[index - 1]) && (array[index] > array[index + 1])) {
+                return true;
+            }
+            else
+                return false;
+        }
+
+    </script>
+</body>
+</html>
