@@ -59,6 +59,7 @@
   <ItemGroup>
     <Content Include="01.digit-to-word.html" />
     <Content Include="02. reverse-number.html" />
+    <Content Include="03. find-all-words.html" />
     <Content Include="04. number-of-divs.html" />
     <Content Include="05. count-of-number-in-array.html" />
     <Content Include="06. bigger-than-its-neighbourhoods.html" />

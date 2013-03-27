@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>First elem. bigger than its neighb.</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>    
+    <script>
+        var text = "We are living in an yellow submarine. In the sky there are no clouds. So we are drinking all the day. We will move out of it in 5 days.";
+        var word = "in";
+
+        findWordinText(text, word, true);
+        findWordinText(text, word, false);
+
+        function findWordinText(text, word, isCaseSensitive) {
+            // using method with default parameters
+            isCaseSensitive = isCaseSensitive || false;
+
+            // constructing pattern
+            var pattern;
+            if (isCaseSensitive === true) {                
+                pattern = new RegExp("\\b" + word + "\\b", "g"); // "g" means gloabol search                
+            }
+            else {                
+                pattern = new RegExp("\\b" + word + "\\b", "gi"); // "i" means case INsensitive                
+            }
+
+            // find occuerences
+            var wordsArray = text.match(pattern);
+            
+            jsConsole.writeLine("Found " + wordsArray.length + " occuerences of '" + word + "'" + "; [isCaseSensitive=" + isCaseSensitive + "]");
+        }
+    </script>
+
+</body>
+</html>
