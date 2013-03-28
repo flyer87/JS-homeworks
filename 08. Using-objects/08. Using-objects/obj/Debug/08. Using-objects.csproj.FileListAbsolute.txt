@@ -1,0 +1,5 @@
+E:\TELERIK\JS-homeworks\08. Using-objects\08. Using-objects\bin\_08.Using_objects.dll
+E:\TELERIK\JS-homeworks\08. Using-objects\08. Using-objects\bin\_08.Using_objects.pdb
+E:\TELERIK\JS-homeworks\08. Using-objects\08. Using-objects\obj\Debug\08. Using-objects.csprojResolveAssemblyReference.cache
+E:\TELERIK\JS-homeworks\08. Using-objects\08. Using-objects\obj\Debug\_08.Using_objects.dll
+E:\TELERIK\JS-homeworks\08. Using-objects\08. Using-objects\obj\Debug\_08.Using_objects.pdb

@@ -57,13 +57,17 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="01.html" />
+    <Content Include="01. planar-coordinate-system.html" />
+    <Content Include="04. check-object-property.html" />
+    <Content Include="05. person-with-min-age.html" />
+    <Content Include="06. group-persons.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="02. add-remove-method-for-array.html" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

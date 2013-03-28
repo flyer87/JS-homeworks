@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Find count of specified number</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var persons = [
+            { firstname: "Bay", lastname: "Ivan", age: 81 },
+            { firstname: "Gosho", lastname: "Petrov", age: 9 },
+            { firstname: "Gaden", lastname: "Diadka", age: 90 }
+        ];
+
+        groupBy(persons, "firstname");
+
+        function groupBy(persons, groupBy) {
+            var personsGroupedBy = {};
+            //person = {}
+            for (var i = 0; i < persons.length; i++) {
+                for (prop in persons[i]) {
+                    if (prop === groupBy) {
+                        if (personsGroupedBy[groupBy]) {
+                            personsGroupedBy[groupBy] = personsGroupedBy[groupBy] + persons[i][prop];
+                        }
+                        else {
+                            personsGroupedBy[groupBy] = persons[i][prop];
+                        }
+                    }
+                }
+            }
+
+        }
+
+
+    </script>
+</body>
+</html>

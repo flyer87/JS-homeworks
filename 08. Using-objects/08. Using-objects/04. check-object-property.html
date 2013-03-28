@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Find count of specified number</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+  	<div id="js-console"></div>	
+	<script src="scripts/js-console.js"></script>
+	<script>
+        // create an object
+	    var testObject = {
+	        firstName: "John",
+            lastName: "Peterson"
+	    }
+
+        // var property = "firstName";
+	    var property = "age";
+	    if (hasProperty(testObject, property)) {
+	        jsConsole.writeLine("property \"" + property + "\" exists!");
+	    }
+	    else {
+	        jsConsole.writeLine("property \"" + property + "\" DOESN'T exist!");
+	    }
+
+        // function to check if object has property
+	    function hasProperty(object, prop) {
+	        if (prop in object) {
+	            return true;
+	        }
+	        else {
+	            return false;
+	        }
+	    }
+	</script>
+</body>
+</html>

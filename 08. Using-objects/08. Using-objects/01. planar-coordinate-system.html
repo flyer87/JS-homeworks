@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        var point1 = buildPoint(15, 5);
+        var point2 = buildPoint(35, 5);
+        var point3 = buildPoint(15, 20);
+
+        jsConsole.writeLine(point1);
+        jsConsole.writeLine(point2);
+
+        // caclucalte distance
+        var distance = calcDistance(point1, point2)
+        jsConsole.writeLine(distance);
+        
+        // build 3 lines
+        var line1 = buildLine(point1, point2);
+        var line2 = buildLine(point2, point3);
+        var line3 = buildLine(point3, point1);
+
+        // check if lines can form a triangle
+        if (canBuildTriangle(line1, line2, line3)) {
+            jsConsole.writeLine("Can form a triangle");
+        }
+        else {
+            jsConsole.writeLine("Can NOT form a triangle");
+        }
+
+        function buildPoint(x, y) {
+            return {
+                x: x,
+                y: y,
+                toString: function () { return "x=" + this.x + ", " + "y=" + this.y; }
+            }
+        }
+
+        function calcDistance(point1, point2) {
+            var distance = Math.sqrt((point1.x - point2.x) * (point1.x - point2.x) +
+                                 (point1.y - point2.y) * (point1.y - point2.y)
+                                );
+            return distance;
+        }
+
+        function buildLine(point1, point2) {
+            return {
+                A: point1,
+                B: point2
+            }
+        }
+
+        function canBuildTriangle(line1, line2, line3) {
+            var a = calcDistance(line1.A, line1.B);
+            var b = calcDistance(line2.A, line2.B);
+            var c = calcDistance(line3.A, line3.B);
+
+            if ((a + b > c) && (b + c > c) && (c + a > b)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Find person with min age</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var persons = [          
+          { firstname: "Bay", lastname: "Ivan", age: 81 },
+          { firstname: "Gosho", lastname: "Petrov", age: 9 },
+          { firstname: "Gaden", lastname: "Diadka", age: 90 }
+        ];
+
+        minAge(persons);
+
+        function minAge(array) {
+            var minIndex = 0;
+            for (var i = 1; i < array.length; i++) {
+                if (array[i].age < array[minIndex].age) {
+                    minIndex = i;
+                }
+            }
+        
+            jsConsole.writeLine("Pesron with min age: ");
+            for (var prop in array[minIndex]) {
+                jsConsole.writeLine(prop + " = " + array[minIndex][prop]);
+            }
+        }
+
+    </script>
+</body>
+</html>
