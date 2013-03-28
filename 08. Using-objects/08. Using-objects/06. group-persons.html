@@ -8,13 +8,15 @@
     <div id="js-console"></div>
     <script src="scripts/js-console.js"></script>
     <script>
-        var persons = [
-            { firstname: "Bay", lastname: "Ivan", age: 81 },
-            { firstname: "Gosho", lastname: "Petrov", age: 9 },
-            { firstname: "Gaden", lastname: "Diadka", age: 90 }
-        ];
+        var persons =
+          [{ firstName: "Gosho", lastName: "Petrov", age: 40 }
+          , { firstName: "Gosho", lastName: "Ivan", age: 30 }
+          , { firstName: "Bay", lastName: "Ivan", age: 40 }
+          , { firstName: "Bay", lastName: "Ivan", age: 30 }
+          ]
 
         groupBy(persons, "firstname");
+
 
         function groupBy(persons, groupBy) {
             var personsGroupedBy = {};
