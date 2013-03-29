@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Replace space</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>   
+	<div id="js-console"></div>	
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var str = "  pesho ";
+	    jsConsole.writeLine(replaceSpace(str));
+
+	    function replaceSpace(str) {
+	        // задачата я реализирах с рег. израз
+	        // където "/" и "/" маркират начало и край на рег. израз
+	        // инертвалът между двете наклонени черти е интервалът, който търсим
+	        // символът 'g' маркира, че трябва да търсим в целия текст
+	        // Под решението с рег. израз съм коментирал друго решение, което също върши работа
+
+	        return str.replace(/ /g, "&amp;nbsp;"); 
+	        // return str.split(' ').join("&amp;nbsp;");	        
+	    }
+	</script>
+</body>
+</html>

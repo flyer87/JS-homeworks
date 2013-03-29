@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Find count of specified number</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var str = "We are living in an yellow submarine. We don't have anything else. Inside the submarine is very tight. So we are drinking all the day. We will move out of it in 5 days.";
+        var substring = "in";
+
+         jsConsole.writeLine(countSubstrings(str, substring));
+
+        function countSubstrings(str, substring) {
+            var inStr = str.toLowerCase();
+            var inSubstring = substring.toLowerCase();
+
+            var index = -1;
+            var counter = 0;
+            while ((index = inStr.indexOf(inSubstring, index + 1)) > -1) {
+                counter++;
+            }
+
+            return counter;
+        }
+    </script>
+</body>
+</html>

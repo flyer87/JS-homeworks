@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Replace space</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>   
+	<div id="js-console"></div>	
+	<script src="scripts/js-console.js"></script>
+	<script>	    
+	    var str = "<html><head><title>Sample site</title></head><body><div>text<div>more text</div>and more...</div>in body</body></html>";
+	    jsConsole.writeLine(replaceSpace(str));
+
+	    function replaceSpace(str) {
+	        // задачата я реализирах с рег. израз
+	        // където "/" и "/g" маркират начало и край на рег. израз
+	        // символът 'g' е модификатор и маркира, че трябва да търсим в целия текст - от съкр. от global
+	        // между / /g имаме ираза <\w+>, където:
+	        // 1. "<" - това е символът за отварящия таг, който търсим; ">" - затврящия таг
+            // 2. "\w+" - "\w" - означава всяка буква,  "+" -  да се среща 1 или повече пъти
+	        // един вид изразът <\w+> казва - да почва с "<", да завършва с ">" и между тях да има буква/и, която да се среща 1 или повече пъти, НО миниум 1 път
+	        
+	        return str.replace(/<\w+>/g, "");
+	    }
+	</script>
+</body>
+</html>

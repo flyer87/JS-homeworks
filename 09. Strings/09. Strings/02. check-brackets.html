@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Check brackets</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>   
+	<div id="js-console"></div>	
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    //var str = "((a+b)/5-d)";
+	    var str = ")(a+b))";
+
+	    if (checkBrackets(str)) {
+	        jsConsole.writeLine("brackets are correct!");
+	    }
+	    else {
+	        jsConsole.writeLine("brackets are NOT correct!");
+	    }
+
+
+	    function checkBrackets(bracketsString) {
+	        var counter = 0;
+
+	        for (var i = 0, len = bracketsString.length; i < len; i++) {
+	            if (bracketsString[i] == "(") {
+                    counter++
+	            }
+	            else if (bracketsString[i] == ')') {
+	                // counter ste e = 0, kogato oshte parwata skoba e ")" ili kogato zatwarqshtite skobi stanat poweche ot otwarqshtite
+	                if (counter == 0) {                        
+	                    return false;
+	                }
+	                else {
+	                    counter--;
+	                }
+	            }
+	        }
+
+	        if (counter == 0) {
+	            return true;
+	        }
+	        else {
+	            return false;
+	        }
+	    }
+
+	</script>
+</body>
+</html>
