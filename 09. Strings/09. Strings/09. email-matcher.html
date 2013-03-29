@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Find count of specified number</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>   
+	<div id="js-console"></div>	
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var text = "tralala lala lalla __peterson@mail.bgg tradad@  dsd alen_delon@usa.com fr__@gmail.com";
+	    var emails = getEmails(text);
+
+        // print mails one by one
+	    for (var i = 0, len = emails.length; i < len; i++) {
+	        jsConsole.writeLine(emails[i]);
+	    }
+
+	    function getEmails(text) {
+	        var emails = [];
+	        /* what says this reg. expr:   [_|A-Z|a-z]+[A-Za-z0-9_]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}   in my code ?
+            reg expr in javascript we mark with "//" ; example text.match(/our_pattern/g), where g is optional and means GLOBAL 
+            1. "[_|A-Z|a-z]+" - mails could contains "_" or letters from 'A' to 'Z' or letters from 'a' to 'z'. Here '+' means at least once!
+            with above expression I dont allow emails begin with digits or other symbols
+            so then
+            2. "[A-Za-z0-9_]+" have the same meaning
+            3. "@" - should contains '@'
+            4. "[A-Za-z0-9.-]+" - already explained
+            5. "\." - escapes '.' 
+            6. "[A-Za-z]{2,4}" - should contains letters A-Z, a-z SO THAT these part should be with lenth between 2 to 4 symbols, no more !!!
+            
+            */
+	        emails = text.match(/\b[_|A-Z|a-z]+[A-Za-z0-9_]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b/g);
+
+	        return emails;
+	    }
+
+	</script>
+</body>
+</html>

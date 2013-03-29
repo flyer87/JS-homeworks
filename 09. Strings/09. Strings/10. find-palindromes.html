@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Find count of specified number</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>   
+	<div id="js-console"></div>	
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var text = "alabala alabalanica tralala, exe?abba!lamal+++#$ege";
+	    //var text = "alabala";
+        	    
+	    var words = []; 
+        words = getWords(text);
+        	    
+        var palindromes = [];
+	    palindromes = getPalindromes(words);
+
+        // prints all palindromes
+	    jsConsole.writeLine("Palindromes: ");
+	    for (var i = 0, len = palindromes.length; i < len; i++) {
+	        jsConsole.writeLine(palindromes[i]);
+	    }
+
+	    // gets all words from the given text as array
+	    function getWords(text) {
+            return text.match(/\b\w+\b/g);
+	    }
+
+        // gets all palindromes as array
+	    function getPalindromes(words) {
+	        for (var i = 0, len = words.length; i < len; i++) {
+	            if (isPalindrome(words[i])) {
+	                palindromes.push(words[i]);
+	            }
+	        }
+	        return palindromes;
+	    }
+
+        // checks if givven word is palindrome and retursn true/false
+	    function isPalindrome(word) {
+	        var charArray = word.split("");
+
+	        var middle = Math.ceil(word.length / 2);
+	        var isPlnd = true;
+	        for (var i = 0; i < middle; i++) {
+	            if (charArray[i] != charArray[charArray.length - 1 - i]) {
+	                isPlnd = false;
+	                break;
+	            }
+	        }
+
+	        return isPlnd;
+	    }
+
+	</script>
+</body>
+</html>

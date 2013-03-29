@@ -3,3 +3,8 @@ E:\TELERIK\JS-homeworks\09. Strings\09. Strings\bin\_09.Strings.pdb
 E:\TELERIK\JS-homeworks\09. Strings\09. Strings\obj\Debug\09. Strings.csprojResolveAssemblyReference.cache
 E:\TELERIK\JS-homeworks\09. Strings\09. Strings\obj\Debug\_09.Strings.dll
 E:\TELERIK\JS-homeworks\09. Strings\09. Strings\obj\Debug\_09.Strings.pdb
+J:\Yumer\TELERIK\JS-homeworks\09. Strings\09. Strings\bin\_09.Strings.dll
+J:\Yumer\TELERIK\JS-homeworks\09. Strings\09. Strings\bin\_09.Strings.pdb
+J:\Yumer\TELERIK\JS-homeworks\09. Strings\09. Strings\obj\Debug\09. Strings.csprojResolveAssemblyReference.cache
+J:\Yumer\TELERIK\JS-homeworks\09. Strings\09. Strings\obj\Debug\_09.Strings.dll
+J:\Yumer\TELERIK\JS-homeworks\09. Strings\09. Strings\obj\Debug\_09.Strings.pdb
